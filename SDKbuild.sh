@@ -130,7 +130,7 @@ init_build(){
 proj_build(){
 
 	# Lars: hacky way to create a default config from the toplevel config
-	cp -a .config $1/project/prjConfigs/$2_defconfig $1/output_$2/.config
+	# cp -a .config $1/project/prjConfigs/$2_defconfig $1/output_$2/.config
 
 	[ ! -d $1/output_$2 ] && mkdir -p $1/output_$2
 	#cp -a $1/project/prjConfigs/$2_defconfig $1/output_$2/.config
