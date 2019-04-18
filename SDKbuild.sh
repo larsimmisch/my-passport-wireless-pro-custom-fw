@@ -95,6 +95,10 @@ preload_config(){
 	if [ ! -f $1/$2_defconfig ]; then
 		echo "Copy default config from $3/prjConfig/$2_defconfig"
 		cp $3/prjConfigs/$2_defconfig $1/$2_defconfig
+
+		if [ $1 == 'korra' ] &&  [ $2 == 'rescue' ] then
+			cp .config $1/$2_defconfig
+		fi
 	fi
 	make $2_defconfig
 }
